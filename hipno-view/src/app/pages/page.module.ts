@@ -3,21 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainComponent } from './main/main.component';
-
-import { SharedModule } from '../shared/shared.module';
+import './about/about.module'
 
 const routes: Routes = [
-  { path: '', component: MainComponent},
+  { path: '', loadChildren:  './about/about.module#AboutModule'},
   { path: '**', pathMatch: 'full', redirectTo: ''}
 ];
 
 @NgModule({
-  declarations: [MainComponent],
+  declarations: [],
   imports: [
     CommonModule,
-    SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
