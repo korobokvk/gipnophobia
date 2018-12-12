@@ -1,23 +1,10 @@
 doctype html
 html(lang="ru")
+  include layout.pug
   head
-    title Гипнофобия
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-
-    link(rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon")
-
-    <!-- Bootstrap style -->
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-
-    <!-- My style -->
-    link(rel="stylesheet" href="assets/css/style.css")
-
-    link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
-
-    <!--Const-->
-    script(src="assets/js/text-content.js")
 
   body
 
@@ -30,7 +17,7 @@ html(lang="ru")
         div.block-phone.col-lg-3.col-md-3.col-sm-1.col-xs-3
           div.phone
             
-            p.pull-right.visible-lg.number +380984011322
+            p.pull-right.visible-lg.number= number
               img.header-phone.img-responsive(src="assets/images/icon/call.png" align="left")
             
             img.visible-md.visible-sm.visible-xs.header-phone.img-responsive(src="assets/images/icon/call.png" align="left")
@@ -781,7 +768,7 @@ html(lang="ru")
                 div.row(id="bonus")
                   div.col-lg-12.col-md-12.col-sm-12.col-xs-12
                     h3.text-center.medium-text
-                      span.line-center 900 -->
+                      span.line-center 900
 
       div.container_fluid.block-red.visible-xs.visible-sm
         div.row
