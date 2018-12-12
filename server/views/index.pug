@@ -1,5 +1,1121 @@
-extends layout
+doctype html
+html(lang="ru")
+  head
+    title Гипнофобия
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
 
-block content
-  h1= title
-  p Welcome to #{title}
+    link(rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon")
+
+    <!-- Bootstrap style -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+
+    <!-- My style -->
+    link(rel="stylesheet" href="assets/css/style.css")
+
+    link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+
+    <!--Const-->
+    script(src="assets/js/text-content.js")
+
+  body
+
+   header(id="reservation_scroll")
+    div.container_fluid
+
+      div.m-1
+      div.container.col-lg-12.col-md-12.col-sm-12.col-xs-12
+
+        div.block-phone.col-lg-3.col-md-3.col-sm-1.col-xs-3
+          div.phone
+            
+            p.pull-right.visible-lg.number +380984011322
+              img.header-phone.img-responsive(src="assets/images/icon/call.png" align="left")
+            
+            img.visible-md.visible-sm.visible-xs.header-phone.img-responsive(src="assets/images/icon/call.png" align="left")
+
+        div.block-menu.col-lg-7.col-md-9.col-sm-11.col-xs-9
+          nav.navbar.navbar-inverse(role="navigation")
+            div.container
+              div.navbar-header.header
+                div.container
+                  button.navbar-toggle(type="button" data-target="#navbarCollapse" data-toggle="collapse")
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+
+                div.collapse.navbar-collapse.navbar-left(id="navbarCollapse")
+                  ul.nav.nav-pills(id="menu")
+                    li
+                      a(href="#quest") О квесте
+                    li
+                      a(href="#reservations") Забронировать
+                    li
+                      a(href="#bonus") Акции
+                    li
+                      a(href="#contact_id") Контакты
+                    li
+                      a(href="#comment_id") Отзывы
+
+      div.m-5
+      div.m-25.visible-xs
+      div.merge-10
+
+      
+
+      div.container.text-center
+        div.title.col-lg-12.col-md-12.col-sm-12.col-xs-10
+          h1.min-visible Гипнофобия
+          h4.min-visible Хоррор - квест
+
+        div.social.visible-xs.col-xs-2
+          a(href="https://facebook.com/hypnophobia")
+            div
+              img.img-responsive.top-img-social(src="assets/images/icon/facebook.png")
+          a(href="https://instagram.com/hypnophobia")
+            div
+              img.img-responsive(src="assets/images/icon/instagram.png")
+
+      div.m-3
+
+      a(href="#reservation_2")
+        button.application.button-lg.btn.btn-lg.text-center ЗАБРОНИРОВАТЬ
+
+      <!-- Top modals windows-->
+      <!-- Modal window reservation top-->
+      div.modal.fade(id="reservation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+        div.modal-dialog(role="document")
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+          div.modal-content
+
+          <!-- Modal-window-registration-user's TOP -->
+            div.modal-body.text-center(id='reservation')
+              h3.table.modal-title Забронировать время
+              div.container_fluid
+                div.row
+
+                  div.m-3
+                  p.table Заполните форму ниже и мы перезвоним Вам для подтверждения брони
+                  div.m-1
+
+                  form(action="#" id="ajax_form" method="post")
+                    div.form-group
+                      input.form-control(name="user_name" type="text" placeholder="Введите ваше имя")
+                    div.form-group
+                      input.form-control(name="user_mail" type="mail" placeholder="Mail")
+                    div.form-group
+                      input.form-control(name="user_phone" type="phone" placeholder="Номер телефона")
+                    div.form-group
+                    div.m-1
+                    div.modal-box
+
+                      div.col-lg-2.col-md-2.col-sm-2.col-xs-2
+                      div.modal-check.col-lg-1.col-md-1.col-sm-1.col-xs-1
+                        input.pull-right.checkbox(type="checkbox")
+
+                      div.modal-check.col-lg-9
+                        span.check Я принимаю условия передачи данных
+                    div.m-5
+
+                    input.application.button-lg.btn.btn-lg.text-center(type="submit" value="ЗАБРОНИРОВАТЬ")
+      <!-- Modal-window-registration-user's BOTTOM -->
+                  div.m-1
+      <!-- Modal window senkyou top-->
+      
+      div.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+        div.modal-dialog(role="document")
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+          div.modal-content
+            
+            div.modal-body(id="window-succes")
+              h3.text-center.table.modal-title(id="myModalLabel") Спасибо
+              div.container_fluid
+                div.row
+
+                  div.m-3
+                  p.table.text-center Вы забронировали игру на 1 ноября 2018 г. в 11:00
+                  div.m-5
+
+                  div.col-lg-12
+
+                    div.col-lg-4
+                      img.images-social.img-responsive(src="assets/images/icon/instagram.png")
+                    div.col-lg-8
+                      span.src
+                        a(href="https://instagram.com/hypnophobia") instagram.com/hypnohobia
+
+                  div.m-6
+
+                  div.col-lg-12
+
+                    div.col-lg-4
+                      img.images-social.img-responsive(src="assets/images/icon/facebook.png")
+                    div.col-lg-8
+                      span.src
+                        a(href="https://facebook.com/hypnophobia") facebook.com/hypnohobia/
+
+                  div.m-7
+      <!-- Modal window senkyou bottom-->
+
+      <!-- Modal window comment top-->
+      div.modal.fade(id="comment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+        div.modal-dialog(role="document")
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+                              span(aria-hidden="true") &times;
+          div.modal-content
+            
+            div.modal-body.text-center
+              h3.table.modal-title(id="myModalLabel") Оставьте ваш отзыв
+              div.container_fluid
+                div.row
+
+                  div.m-3
+                  p.table Мы очень рады, что вы посетили наш квест. Поделитесь своими впечатлениями
+                  div.m-1
+
+                  form(action="#" method="post")
+                    div.form-group
+                      input.form-control(name="name" type="text" placeholder="Введите ваше имя")
+                    div.form-group
+                      textarea.form-control(name="-text" type="text" cols="30" rows="10" placeholder="Введите текст")
+                    div.m-5
+
+                    div.form-group
+                      input.application.button-lg.btn.btn-lg.text-center(type="submit" value="ОСТАВИТЬ ОТЗЫВ")
+
+                  div.m-1
+      <!-- Modal window comment bottom-->
+
+      <!-- Modal window sertyfication top-->
+      div.modal.fade(id="sertyfication" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+        div.modal-dialog(role="document")
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+          div.modal-content
+            
+            div.modal-body.text-center
+              h3.table.modal-title(id="myModalLabel") Заказать сертификат
+              div.container_fluid
+                div.row
+
+                  div.m-3
+                  p.table Заполните форму ниже и мы перезвоним Вам для подтверждения заказа.
+                  div.m-1
+
+                  form(action="#" method="post")
+                    div.form-group
+                      input.form-control(name="user-name" type="text" placeholder="Введите ваше имя")
+                    div.form-group
+                      input.form-control(name="user-mail" type="mail" placeholder="Mail")
+                    div.form-group
+                      input.form-control(name="user-phone" type="phone" placeholder="Номер телефона")
+
+                    div.m-1
+                    div.modal-box
+
+                    div.col-lg-2.col-md-2.col-sm-2.col-xs-2
+                    div.modal-check.col-lg-1.col-md-1.col-sm-1.col-xs-1
+                      input.pull-right.checkbox(type="checkbox")
+
+                    div.modal-check.col-lg-9
+                      span.check Я принимаю условия передачи данных
+                    div.m-5
+
+                    button.application.button-lg.btn.btn-lg.text-center(type="submit") ЗАКАЗАТЬ
+
+                  div.m-1
+      <!-- Modal window sertyfication bottom-->
+
+      <!-- Modal window comment top-->
+      div.modal.fade(id="comment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+        div.modal-dialog(role="document")
+          button.close(type="button" data-dasmiss="modal" aria-label="Close")
+                              span(aria-hidden="true") &times;
+          div.modal-content
+            
+            div.modal-body.text-center
+              h3.table.modal-title(id="myModalLabel") Оставьте ваш отзыв
+              div.container_fluid
+                div.row
+
+                  div.m-3
+                  p.table Мы очень рады, что вы посетили наш квест. Поделитесь своими впечатлениями
+                  div.m-1
+
+                  form(action="#" method="post")
+                    div.form-group
+                      input.form-control(name="name" type="text" placeholder="Введите ваше имя")
+                    div.form-group
+                      textarea.form-control(name="-text" type="text" cols="30" rows="10" placeholder="Введите текст")
+                    div.m-5
+
+                    div.form-group
+                      input.application.button-lg.btn.btn-lg.text-center(type="submit" value="ОСТАВИТЬ ОТЗЫВ")
+
+                  div.m-1
+      <!-- Modal window comment bottom-->
+      <!-- Bottom modals windows-->
+
+   main
+    div.container_fluid
+      div.container.text-center
+        div.text-inform(id="quest")
+
+          h2.min-visible О квесте 
+          div.m-1
+          p.min-visible
+            script.
+              document.write(TEXT_ABOUT_QUEST)
+          p.min-visible
+            script.
+              document.write(TEXT_ABOUT_QUEST_TWO)
+          p.min-visible
+            script.
+              document.write(TEXT_ABOUT_QUEST_FREE)
+          p.min-visible
+            script.
+              document.write(TEXT_ABOUT_QUEST_FOO)
+
+          div.m-4
+
+      div.container_fluid.visible-lg.visible-md
+        div.row
+          div.block-red.text-center
+            div.m-1
+            div.col-lg-1.col-md-1.col-xs-1
+
+            div.red.text-center.col-lg-2.col-md-3.col-sm-4.col-xs-3
+             img.red-img.img-circle.img-responsive(src="assets/images/clock.png")
+             div.m-7
+             h3 75 минут продолжительность игры
+             div.m-8
+
+            div.red.text-center.col-lg-2.col-md-3.col-sm-4.col-xs-3
+             img.red-img.img-circle.img-responsive(src="assets/images/pram.png")
+             div.m-7
+             h3 16 +
+             h3 ограничение по возрасту
+             div.m-8
+
+            div.red.text-center.col-lg-2.col-md-3.col-sm-4.col-xs-3
+             img.red-img.img-circle.img-responsive(src="assets/images/toxic.png")
+             div.m-7
+             h3 зашкаливающий
+             h3 уровень
+             h3 страха
+             div.m-8
+
+            div.red.visible-md.col-md-3
+
+            div.red.left-img.col-lg-2.col-md-3.col-sm-4.col-xs-3
+             img.red-img.img-circle.img-responsive(src="assets/images/money.png")
+             div.m-7
+             h3 700-900 гривен
+             h3 стоимость
+             h3 игры
+             div.m-8
+
+            div.red.col-lg-2.col-md-3.col-sm-4.col-xs-3
+             img.red-img.img-circle.img-responsive(src="assets/images/group.png")
+             div.m-7
+             h3 2 - 4
+             h3 количество
+             h3 игроков
+             div.m-8
+
+            div.col-lg-1.col-md-1
+
+            div.m-5
+
+      div.container_fluid.visible-sm.visible-xs
+        div.row
+          div.block-red.text-center
+            div.m-1
+            div.col-xs-12.col-sm-12.col-md-12.col-lg-12
+              div.col-lg-1.col-md-1.col-xs-1
+
+              div.red.text-center.col-lg-3.col-md-2.col-sm-3.col-xs-3
+               img.red-img.img-circle.img-responsive(src="assets/images/clock.png")
+               div.m-7
+               h3 75 минут продолжительность игры
+               div.m-8
+
+              div.red.text-center.col-lg-3.col-md-2.col-sm-3.col-xs-3
+               img.red-img.img-circle.img-responsive(src="assets/images/pram.png")
+               div.m-7
+               h3 16 +
+               h3 ограничение по возрасту
+               div.m-8
+
+              div.red.text-center.col-lg-3.col-md-2.col-sm-3.col-xs-3
+               img.red-img.img-circle.img-responsive(src="assets/images/toxic.png")
+               div.m-7
+               h3 зашкаливающий
+               h3 уровень
+               h3 страха
+               div.m-8
+
+            div.col-xs-1
+            div.col-xs-12.col-sm-12.col-md-12.col-lg-12
+              div.col-xs-3
+
+              div.red.left-img.col-lg-3.col-md-2.col-sm-3.col-xs-3
+               img.red-img.img-circle.img-responsive(src="assets/images/money.png")
+               div.m-7
+               h3 700-900 гривен
+               h3 стоимость
+               h3 игры
+               div.m-8
+
+              div.red.col-lg-2.col-md-2.col-sm-3.col-xs-3
+               img.red-img.img-circle.img-responsive(src="assets/images/group.png")
+               div.m-7
+               h3 2 - 4
+               h3 количество
+               h3 игроков
+               div.m-8
+
+              div.col-xs-3
+            div.col-lg-1.col-md-1
+
+            div.m-5
+
+      div.container_fluid
+        div.container
+          div.row
+            a(id="reservation_2")
+            h2.text-center.table(id="reservations") Забронировать
+            h4.text-center.table Цены указаны за команду от 2 до 4 человек. За каждого дополнительного игрока доплата 150 грн.
+          div.m-1
+        div.container.min-conainer
+          div.row
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 29 октября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 30 октября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 31 октября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 1 ноября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 2 ноября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 3 ноября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+            div.col-lg-12.col-md-12.col-sm-12.col-xs-12.price-list
+             div.width-container.min-conainer
+              p.table.number-day Понидельник, 4 ноября
+
+              div.col-lg-12.col-lg-12.col-sm-12.col-xs-12.p-none
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 11:00
+                  span.control(data-toggle="modal" data-target="#reservation") 12:30
+                  span.control(data-toggle="modal" data-target="#reservation") 14:00
+                  div.m-2
+                  span.text-center.line-center 700
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 15:30
+                  span.control(data-toggle="modal" data-target="#reservation") 17:00
+                  span.control(data-toggle="modal" data-target="#reservation") 18:30
+                  div.m-2
+                  span.text-center.line-center 800
+                div.text-center.p-none.col-lg-4.col-md-4.col-sm-4.col-xs-4
+                  span.control(data-toggle="modal" data-target="#reservation") 20:00
+                  span.control(data-toggle="modal" data-target="#reservation") 21:30
+                  span.control(data-toggle="modal" data-target="#reservation") 23:00
+                  div.m-2
+                  span.text-center.line-center 900
+
+
+
+              
+
+
+             <!--   div.container.width-container.min-conainer
+              p.table.number-day Вторник, 30 октября
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 11:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 12:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 14:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 700
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 15:30 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 17:00 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 18:30
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 800
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 20:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 21:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 23:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 900
+             div.m-3
+
+             div.container.width-container.min-conainer
+              p.table.number-day Среда, 31 октября
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 11:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 12:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 14:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 700
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 15:30 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 17:00 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 18:30
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 800
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 20:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 21:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 23:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 900
+             div.m-3
+
+             div.container.width-container.min-conainer
+              p.table.number-day Четверг, 1 ноября
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 11:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 12:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 14:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 700
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 15:30 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 17:00 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 18:30
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 800
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 20:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 21:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 23:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 900
+             div.m-3
+
+             div.container.width-container.min-conainer
+              p.table.number-day Пятница, 2 ноября
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 11:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 12:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 14:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 700
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 15:30 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 17:00 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 18:30
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 800
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 20:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 21:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 23:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 900
+             div.m-3
+
+             div.container.width-container.min-conainer
+              p.table.number-day Субброта, 3 ноября
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 11:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 12:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 14:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 700
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 15:30 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 17:00 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 18:30
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 800
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 20:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 21:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 23:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 900
+             div.m-3
+
+             div.container.width-container.min-conainer
+              p.table.number-day Воскресенье, 4 ноября
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 11:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 12:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 14:00
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 700
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 15:30 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 17:00 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 18:30
+
+                div.row
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 800
+
+              div.col-lg-4.col-md-4.col-sm-4.col-xs-4.top-delete
+                h3.text-center.min-int
+                  span.int-left(data-toggle="modal" data-target="#reservation") 20:00 
+                  span.int-center(data-toggle="modal" data-target="#reservation") 21:30 
+                  span.int-right(data-toggle="modal" data-target="#reservation") 23:00
+
+                div.row(id="bonus")
+                  div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    h3.text-center.medium-text
+                      span.line-center 900 -->
+
+      div.container_fluid.block-red.visible-xs.visible-sm
+        div.row
+
+          div.min-block-red
+            div.container.visible-xs.visible-sm
+
+              h2.table.text-center Акции и скидки
+
+              div.col-sm-12.col-xs-12.carousel.slide(id="carousel-example-generic" data-ride="carousel")
+                ol.carousel-indicators
+                  li.active(data-target="#carousel-example-generic" data-slide-to="0")
+                  li(data-target="#carousel-example-generic" data-slide-to="1")
+                  li(data-target="#carousel-example-generic" data-slide-to="2")
+                  li(data-target="#carousel-example-generic" data-slide-to="3")
+                  li(data-target="#carousel-example-generic" data-slide-to="4")
+                  li(data-target="#carousel-example-generic" data-slide-to="5")
+
+                div.carousel-inner(role="listbox")
+                  div.item.col-sm-12.col-xs-12.col-sm-12.col-xs-12.active
+                    img.img-slide(src="assets/images/carouel-item/discount.png")
+                    div.m-10
+                    div.visible-xs.m-30
+                    div.visible-xs.m-17
+                    div.marge-5
+                    div.carousel-caption
+                      h4 ПОНЕДЕЛЬНИК
+                      p
+                        script.
+                          document.write(SLIDER_BONUS_TEXT_ONE)
+
+                  div.item.col-sm-12.col-xs-12
+                    img.img-slide(src="assets/images/carouel-item/social-media.png")
+                    div.m-10
+                    div.visible-xs.m-30
+                    div.visible-xs.m-17
+                    div.marge-5
+                    div.carousel-caption
+                      h4 ВТОРНИК
+                      p
+                        script.
+                          document.write(SLIDER_BONUS_TEXT_TWO)
+
+                  div.item.col-sm-12.col-xs-12.col-sm-12.col-xs-12
+                    img.img-slide(src="assets/images/carouel-item/uni.png")
+                    div.m-10
+                    div.visible-xs.m-30
+                    div.visible-xs.m-17
+                    div.marge-5
+                    div.carousel-caption
+                      h4 СРЕДА
+                      p
+                        script.
+                          document.write(SLIDER_BONUS_TEXT_FREE)
+
+                  div.item.col-sm-12.col-xs-12.col-sm-12.col-xs-12
+                    img.img-slide(src="assets/images/carouel-item/calendar.png")
+                    div.m-10
+                    div.visible-xs.m-30
+                    div.visible-xs.m-17
+                    div.marge-5
+                    div.carousel-caption
+                      h4 ЧЕТВЕРГ
+                      p
+                        script.
+                          document.write(SLIDER_BONUS_TEXT_FOO)
+
+                  div.item.col-sm-12.col-xs-12
+                    img.img-slide(src="assets/images/carouel-item/partner.png")
+                    div.m-10
+                    div.visible-xs.m-30
+                    div.visible-xs.m-17
+                    div.marge-5
+                    div.carousel-caption
+                      h4 ПЯТНИЦА
+                      p
+                        script.
+                          document.write(SLIDER_BONUS_TEXT_FIVE)
+
+                  div.item.col-sm-12.col-xs-12
+                    img.img-slide(src="assets/images/carouel-item/gift.png")
+                    div.m-10
+                    div.visible-xs.m-30
+                    div.visible-xs.m-17
+                    div.marge-5
+                    div.carousel-caption
+                      h4 ДЕНЬ РОЖДЕНЬЯ
+                      p
+                        script.
+                          document.write(SLIDER_BONUS_TEXT_SIX)
+
+                  a.left.carousel-control(href="#carousel-example-generic" role="button" data-slide="prev")
+                    span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+                    span.sr-only Previous
+
+                  a.right.carousel-control(href="#carousel-example-generic" role="button" data-slide="next")
+                    span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+                    span.sr-only Next
+
+      div.container_fluid.visible-lg.visible-md
+        div.block-red-two
+          div.container.text-center
+            div.row
+
+              h2.table.text-center Акции и бонусы
+
+              div.m-3
+
+              div.col-lg-1.col-md-1
+              div.image-center.col-lg-3.col-md-3
+                img.img-responsive(src="assets/images/carouel-item/discount.png")
+                div.m-5
+                h4 ПОНЕДЕЛЬНИК
+                p
+                  script.
+                    document.write(SLIDER_BONUS_TEXT_ONE)
+
+              div.image-center.col-lg-3.col-md-3
+                img.img-responsive(src="assets/images/carouel-item/social-media.png")
+                div.m-5
+                h4 ВТОРНИК
+                p
+                  script.
+                    document.write(SLIDER_BONUS_TEXT_TWO)
+
+              div.image-center.col-lg-3.col-md-3
+                img.img-responsive(src="assets/images/carouel-item/uni.png")
+                div.m-5
+                h4 СРЕДА
+                p
+                  script.
+                    document.write(SLIDER_BONUS_TEXT_FREE)
+              div.col-lg-1.col-md-1
+
+            div.m-3
+
+              div.col-lg-1.col-md-1
+              div.image-center.col-lg-3.col-md-3
+                img.img-responsive(src="assets/images/carouel-item/calendar.png")
+                div.m-5
+                h4 ЧЕТВЕРГ
+                p
+                  script.
+                    document.write(SLIDER_BONUS_TEXT_FOO)
+
+              div.image-center.col-lg-3.col-md-3
+                img.img-responsive(src="assets/images/carouel-item/partner.png")
+                div.m-5
+                h4 ПЯТНИЦА
+                p
+                  script.
+                    document.write(SLIDER_BONUS_TEXT_FIVE)
+
+              div.image-center.col-lg-3.col-md-3
+                img.img-responsive(src="assets/images/carouel-item/gift.png")
+                div.m-5
+                h4 ДЕНЬ РОЖДЕНЬЯ
+                p
+                  script.
+                    document.write(SLIDER_BONUS_TEXT_SIX)
+              div.col-lg-1.col-md-1
+
+      div.container_fluid.min-block-red
+        div.container
+          div.row
+
+            div.sertification
+              h2.table.text-center Подарочный сертификат
+              div.m-3
+              p.text-center
+                script.
+                  document.write(SERTIFICATION_TEXT)
+              div.m-3
+              button.application.button-lg.btn.btn-lg.text-center(data-toggle="modal" data-target="#sertyfication" id="comment_id") ЗАКАЗАТЬ
+              div.m-3
+
+      div.container_fluid
+
+          div.comment.text-center
+            h2.table Отзывы
+
+              div.col-sm-12.col-xs-12.carousel.slide(id="carousel-example" data-ride="carousel")
+
+                div.carousel-inner(role="listbox")
+                  div.item.col-lg-12.col-xs-12.col-sm-12.col-xs-12.active
+                    div.m-1
+                    p.slider-text 
+                      script.
+                        document.write(COMMENT_TEXT)
+                    div.m-1
+                    p.slider-text Ваня, 28 сентября 2018г.
+                    
+
+                  div.item.col-lg-12.col-xs-12.col-sm-12.col-xs-12
+                    div.m-1
+                    p.slider-text 
+                      script.
+                        document.write(COMMENT_TEXT)
+                    div.m-1
+                    p.slider-text Иван, 29 сентября 2018г.
+                div.m-1
+                button.application.button-lg.btn.btn-lg.text-center(data-toggle="modal" data-target="#comment") ОСТАВИТЬ ОТЗЫВ
+                    
+                div.m-2.visible-xs
+
+                a.left.carousel-control(href="#carousel-example" role="button" data-slide="prev")
+                  span.glyphicon.glyphicon-menu-left(aria-hidden="true")
+                  span.sr-only Previous
+
+                a.right.carousel-control(href="#carousel-example" role="button" data-slide="next")
+                  span.glyphicon.glyphicon-menu-right(aria-hidden="true")
+                  span.sr-only Next
+      
+
+
+
+      div.container_fluid(id="contact_id")
+
+        div.row
+
+          div.m-1
+
+          h2.text-center.table Контакты
+
+          div.m-3
+
+          div.map
+            div.container
+
+              div.mar-30.visible-sm.visible-xs
+
+              div.contact-map.pull-right.col-lg-6.col-md-6.visible-lg.visible-md
+                div.m-5
+
+                h3.table.text-center Гипнофобия
+
+                div.col-lg-12.col-md-12
+                  div.modal-check.col-lg-4.col-md-4
+                    img.geo-img.pull-right.img-responsive(src="assets/images/icon/geo.png")
+                  div.col-lg-8.col-md-8
+                    span.contact.check ул.Екатеринская, 80
+
+                div.m-6
+
+                div.col-lg-12.col-md-12
+                  div.modal-check.col-lg-4.col-md-4
+                    img.img-call.pull-right.img-responsive(src="assets/images/icon/pfone-call.png")
+                  div.col-lg-8.col-md-8
+                    span.contact.check +380984011322
+
+                div.m-7
+
+                div.col-lg-12.col-md-12
+                  a(href="https://instagram.com/hypnophobia")
+                    div.modal-check.col-lg-4.col-md-4
+                      img.pull-right.img-responsive(src="assets/images/icon/instagram.png")
+                    div.col-lg-8.col-md-8
+                      span.contact.check instagram.com/hypnophobia
+
+                div.m-8
+
+                div.col-lg-12.col-md-12
+                  a(href="https://facebook.com/hypnophobia")
+                    div.modal-check.col-lg-4.col-md-4
+                      img.pull-right.img-responsive(src="assets/images/icon/facebook.png")
+                    div.col-lg-8.col-md-8
+                      span.contact.check facebook.com/hypnophobia
+
+                div.m-8
+
+                div.col-lg-12.col-md-12
+                  div.modal-check.col-lg-4.col-md-4
+                    img.pull-right.img-responsive(src="assets/images/icon/email.png")
+                  div.col-lg-8.col-md-8
+                    span.contact.check gipnofobia@gmail.com
+                div.m-10
+
+      div.m-5.visible-xs
+
+      div.container_fluid
+        div.container.visible-sm.visible-xs
+          div.row
+
+            div.col-sm-12.col-xs-12.text-center
+              div.modal-check.col-sm-2.col-xs-2
+                img.geo-img.pull-right.img-responsive(src="assets/images/icon/geo.png")
+              div.col-sm-10.col-xs-10
+                span.contact.check ул.Екатеринская, 80
+
+            div.m-7
+
+            div.col-sm-12.col-xs-12.text-center
+              div.modal-check.col-sm-2.col-xs-2
+                img.geo-img.pull-right.img-responsive(src="assets/images/icon/call.png")
+              div.col-sm-10.col-xs-10
+                span.contact.check +380984011322
+
+            div.m-10
+
+            div.col-sm-12.col-xs-12.text-center
+              a(href="https://instagram.com/hypnophobia")
+                div.modal-check.col-sm-2.col-xs-2
+                  img.geo-img.pull-right.img-responsive(src="assets/images/icon/instagram.png")
+                div.col-sm-10.col-xs-10
+                  span.contact.check instagram.com/hypnophobia
+
+            div.m-11
+
+            div.col-sm-12.col-xs-12.text-center
+              a(href="https://facebook.com/hypnophobia")
+                div.modal-check.col-sm-2.col-xs-2
+                  img.geo-img.pull-right.img-responsive(src="assets/images/icon/facebook.png")
+                div.col-sm-10.col-xs-10
+                  span.contact.check facebook.com/hypnophobia
+
+            div.m-11
+
+            div.col-sm-12.col-xs-12.text-center
+              div.modal-check.col-sm-2.col-xs-2
+                img.geo-img.pull-right.img-responsive(src="assets/images/icon/email.png")
+              div.col-sm-10.col-xs-10
+                span.contact.check gipnofobia@gmail.com
+
+            div.m-15.visible-sm-visible-xs
+
+
+    <!--Bootstrap script-->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+
+    
+
+    <!-- My script -->
+    script(src="assets/js/jacor.js")
+    <!-- Modal window's  -->
+    script(src="assets/js/modal.js")
