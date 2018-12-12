@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '../material/material.module'
-import { CrudFormComponent } from './crud-form/crud-form.component'
+import { MaterialModule } from '../material/material.module';
+import { MenuComponent } from './menu/menu.component';
+import { CrudFormComponent } from './crud-form/crud-form.component';
+import { Routes, RouterModule } from '@angular/router';
+
 
 @NgModule({
-  declarations: [CrudFormComponent],
+  declarations: [CrudFormComponent, MenuComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
-  exports: [CrudFormComponent,MaterialModule]
+  exports: [
+    CrudFormComponent,
+    MaterialModule, 
+    MenuComponent
+  ]
 })
 export class SharedModule { }

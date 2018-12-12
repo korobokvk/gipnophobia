@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 
-import './sertificate/sertificate.module'
 
 const routes: Routes = [
   { path: 'about', loadChildren:  './about/about.module#AboutModule'},
