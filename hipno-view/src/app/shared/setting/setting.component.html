@@ -1,0 +1,31 @@
+<div class="form-wrapper">
+    <form [formGroup]="timeForm">
+        <mat-form-field>
+          <input matInput placeholder="Цена" type="text" formControlName="price">
+        </mat-form-field>
+      
+          <mat-form-field>
+              <mat-select placeholder="Настройка времени" formControlName="time">
+                  <mat-option *ngFor="let time of times" value=[time.value]>
+                    {{time.viewValue}}
+                  </mat-option>
+                </mat-select>
+          </mat-form-field>
+      
+          <mat-form-field>
+              <mat-select placeholder="Настройка времени" formControlName="time1">
+                  <mat-option *ngFor="let time of times" value=[time.value]>
+                    {{time.viewValue}}
+                  </mat-option>
+                </mat-select>
+          </mat-form-field>
+      
+          <mat-form-field>
+              <mat-select placeholder="Настройка времени" formControlName="time2">
+                  <mat-option *ngFor="let time of times" value=[time.value]>
+                    {{time.viewValue}}
+                  </mat-option>
+                </mat-select>
+          </mat-form-field>
+      </form>
+</div>

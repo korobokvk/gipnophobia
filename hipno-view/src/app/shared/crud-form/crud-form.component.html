@@ -1,21 +1,26 @@
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Favorite food" value="Sushi">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="Leave a comment"></textarea>
-    </mat-form-field>
+<div class="form-wrapper">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <textarea rows="10" cols="45" matInput placeholder="Сюда пиши контент"></textarea>
+        </mat-form-field>
+        <div class="action-wrapper">
 
-        <mat-slide-toggle
-            class="example-margin"
-            [color]="color"
-            [checked]="checked"
-            [disabled]="disabled">
-            Active
-        </mat-slide-toggle>
-   
-        <button mat-icon-button color="primary">
-            <mat-icon svgIcon="thumbs-up"></mat-icon>
-        </button>
-  </form>
+            <mat-slide-toggle
+                class="example-margin"
+                [color]="'primary'"
+                [checked]="checked"
+                [disabled]="disabled">
+                Показать запись на странице?
+            </mat-slide-toggle>
+            <button mat-icon-button color="primary">
+                <mat-icon svgIcon="save"></mat-icon>
+            </button>
+            <span>Схоронить</span>
+            <button mat-icon-button color="warn">
+                <mat-icon svgIcon="delete"></mat-icon>
+            </button>
+            <span>Удалить</span>
+        
+        </div>
+      </form>
+</div>

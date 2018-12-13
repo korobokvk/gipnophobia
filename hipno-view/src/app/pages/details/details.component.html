@@ -1,3 +1,8 @@
-<p>
-  details works!
-</p>
+<div class="buttons">
+    <button mat-raised-button color="primary" (click)="addSelect()">Добавить еще времени</button>
+    <button mat-raised-button color="warb" (click)="removeSelect()">Отнять времени</button>
+</div>
+
+<div class="settings" *ngFor="let example of examples">
+    <app-setting></app-setting>
+</div>
